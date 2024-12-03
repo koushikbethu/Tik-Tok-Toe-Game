@@ -1,0 +1,103 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ff7eb3, #ff758c, #ff9966, #ffcc66, #99ccff, #9966ff);
+  background-size: 400% 400%;
+  animation: gradientAnimation 8s ease infinite;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container, .result-container {
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.hidden {
+  display: none;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 0 auto;
+  max-width: 300px;
+  width: 100%;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  color: #0072ff;
+  font-size: 36px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 5px;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.cell:hover {
+  background-color: #f0f0f0;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 20px 0 0 0;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  color: #0072ff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0072ff;
+  color: white;
+}
+
+/* Result Screen */
+.result-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#resultMessage {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
